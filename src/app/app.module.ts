@@ -10,10 +10,6 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import {AngularFireModule} from "@angular/fire/compat";
 import {environment} from "../environments/environment";
 import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
-import { SelectLAnguageComponent } from './components/select-language/select-language.component';
-import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
-import { AddLanguageComponent } from './components/add-language/add-language.component';
-import { LangueListComponent } from './components/langue-list/langue-list.component';
 
 @NgModule({
   declarations: [
@@ -21,17 +17,13 @@ import { LangueListComponent } from './components/langue-list/langue-list.compon
     FooterComponent,
     HeaderComponent,
     HomePageComponent,
-    LoginPageComponent,
-    SelectLAnguageComponent,
-    AddLanguageComponent,
-    LangueListComponent
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule,
-    FontAwesomeModule
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
