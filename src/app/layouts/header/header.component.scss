@@ -1,0 +1,16 @@
+.head{
+  height: 50px;
+
+  app-select-language{
+    top: 26px;
+    right:50px;
+    z-index: 1000;
+  }
+  .language_section{
+    width: 150px;
+    margin-top: 30px;
+  }
+}
+main{
+  height: calc(100vh - 120px);
+}

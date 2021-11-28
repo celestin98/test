@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+$base-color: linear-gradient(90deg, rgba(254,196,66,1) 0%, rgba(252,213,117,1) 43%, rgba(254,194,62,1) 100%) !important;
+$primary: rgba(254,194,62,1) !important;
+
+.bg_primary{
+  background: $base-color;
+}
+.bg_primary1{
+  background-color: $primary ;
+}
+p,div,label{
+
+  font-family: "Nexa Book", sans-serif;
+  color: #434343;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.my_card{
+  border-radius: 10px;
+  box-shadow: #a9a9a9 3px 2px 5px;
+  text-align: center;
+  max-height: 100vh;
+  width: 80%;
+  background-color: white;
+  height: calc(100vh - 200px);
+}

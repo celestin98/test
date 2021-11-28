@@ -16,7 +16,7 @@ export class LoginPageComponent implements OnInit {
   }
 
   login(): void {
-    this.router.navigate(['items'], { relativeTo: this.route });
+    this.router.navigate(['home'], { relativeTo: this.route });
   }
 
 
