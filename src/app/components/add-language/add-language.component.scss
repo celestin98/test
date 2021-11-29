@@ -42,4 +42,12 @@ li:hover {
 }
 .vae{
   transform: translateY(-100%);
+  transition: 1s;
+}
+.my_list{
+  max-height: 100% !important;
+  width: 100%;
+}
+.select{
+  background-color: orange;
 }

@@ -1,4 +1,4 @@
 export interface Language {
-  id?:any;
-  nom:string;
+  id?:string;
+  nom?:string;
 }

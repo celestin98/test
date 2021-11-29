@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Level} from "../../models/level";
 
 @Component({
   selector: 'app-home-page',
@@ -6,10 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
+  showModal = false;
+  leveli: Level = {};
+  levelsh:Level = {};
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  modalClosed(isClosed: any) {
+    this.leveli = {id: '', language: '', comprendre: '', parle: '', ecrire: ''}
+    this.showModal = !this.showModal;
+
+  }
+
+  modi(level: Level) {
+    this.leveli = level;
+    this.showModal = !this.showModal;
+  }
+  showDetail(level:Level){
+    this.levelsh=level;
+  }
 }

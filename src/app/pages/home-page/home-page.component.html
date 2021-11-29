@@ -8,15 +8,22 @@
       <label class="h3 header">Gestion des langues</label>
     </div>
     <div class="col-md-12 col-12 ">
-          <app-langue-list class="w-100 d-flex align-items-center justify-content-center"></app-langue-list>
+          <app-langue-list (newItemEvent)="modalClosed($event)" (levelemit)="modi($event)"  (levelEventEmitter)="showDetail($event)" class="w-100 d-flex align-items-center justify-content-center"></app-langue-list>
     </div>
   </div>
-<div class="my_modal w-100 h-100 d-flex justify-content-center align-items-center">
-  <app-add-language></app-add-language>
+<div class="my_modal w-100 h-100 d-flex justify-content-center align-items-center" *ngIf="showModal" >
+  <app-add-language *ngIf="showModal" (onClose)="modalClosed($event)" [level]="leveli"></app-add-language >
   <div class="voile w-100 h-100"></div>
 </div>
+  <div class="detail_modal">
+    <div class="contend">
+      {{levelsh.language}}
+    </div>
+
+  </div>
 </main>
 <footer>
+
   <app-footer></app-footer>
 </footer>
 </body>
