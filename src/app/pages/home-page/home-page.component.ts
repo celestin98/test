@@ -8,8 +8,9 @@ import {Level} from "../../models/level";
 })
 export class HomePageComponent implements OnInit {
   showModal = false;
+  showModalDetail = false;
   leveli: Level = {};
-  levelsh:Level = {};
+  levelsh: Level = {id: ''};
 
   constructor() {
   }
@@ -27,7 +28,13 @@ export class HomePageComponent implements OnInit {
     this.leveli = level;
     this.showModal = !this.showModal;
   }
-  showDetail(level:Level){
-    this.levelsh=level;
+
+  showDetail(level: Level) {
+    this.levelsh = level;
+    this.showModalDetail = !this.showModalDetail;
   }
+  closemodal(){
+    this.showModalDetail = !this.showModalDetail;
+  }
+
 }
