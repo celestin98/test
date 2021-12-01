@@ -14,6 +14,11 @@ import { SelectLAnguageComponent } from './components/select-language/select-lan
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import { AddLanguageComponent } from './components/add-language/add-language.component';
 import { LangueListComponent } from './components/langue-list/langue-list.component';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {ConnectionServiceModule} from 'ng-connection-service';
+
 
 @NgModule({
   declarations: [
@@ -24,16 +29,32 @@ import { LangueListComponent } from './components/langue-list/langue-list.compon
     LoginPageComponent,
     SelectLAnguageComponent,
     AddLanguageComponent,
-    LangueListComponent
+    LangueListComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    HttpClientModule,
+    ConnectionServiceModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports:[TranslateModule],
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}

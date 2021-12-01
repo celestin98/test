@@ -1,41 +1,48 @@
 <body class=" min-vh-100">
-<header class="bg_primary " >
-  <app-header ></app-header>
+<header class="bg_primary ">
+  <app-header></app-header>
 </header>
-<main class="p-0 m-0">
+<main class="p-0 m-0 position-relative">
+  <div *ngIf="showModalDetail" class="bg_primary position-absolute rounded"
+       style="right: 50px; top: 30px; height: 20px;width: 20px">
+    <fa-icon [icon]="faLook" class="text-white"></fa-icon>
+  </div>
   <div class="row vw-100 m-0">
     <div class="col-12 d-flex justify-content-center align-items-center header p-3">
-      <label class="h3 header">Gestion des langues</label>
+      <label class="h3 header" [translate]="'homepagecomponent.header' "></label>
     </div>
     <div class="col-md-12 col-12 ">
-          <app-langue-list (newItemEvent)="modalClosed($event)" (levelemit)="modi($event)"  (levelEventEmitter)="showDetail($event)" class="w-100 d-flex align-items-center justify-content-center"></app-langue-list>
+      <app-langue-list (newItemEvent)="addLanguageModal($event)" (levelemit)="modifyLanguageModal($event)"
+                       (levelEventEmitter)="showDetailModal($event)"
+                       class="w-100 d-flex align-items-center justify-content-center"></app-langue-list>
     </div>
   </div>
-<div class="my_modal w-100 h-100 d-flex justify-content-center align-items-center" *ngIf="showModal" >
-  <app-add-language *ngIf="showModal" (onClose)="modalClosed($event)" [level]="leveli"></app-add-language >
-  <div class="voile w-100 h-100"></div>
-</div>
+  <div class="my_modal w-100 h-100 d-flex justify-content-center align-items-center" *ngIf="showModal">
+    <app-add-language *ngIf="showModal" (onClose)="addLanguageModal($event)" [level]="leveli"></app-add-language>
+    <div class="voile w-100 h-100"></div>
+  </div>
   <div *ngIf="showModalDetail" class="detail_modal d-flex justify-content-center align-items-center">
     <div class="contend d-flex align-content-end justify-content-end flex-column" style="padding-top: 3px">
-      <button class="closebutton d-flex justify-content-center align-items-center bg-transparent border-0" (click)="closemodal()">
+      <button class="closebutton d-flex justify-content-center align-items-center bg-transparent border-0"
+              (click)="closeModal()">
         x
       </button>
-      <div class="headers d-flex flex-row justify-content-between p-2" >
-        <h4 class="font-weight-bolder">Detail</h4>
-        <h5 class="font-weight-bolder text-center"> {{levelsh.language}}</h5>
+      <div class="headers d-flex flex-row justify-content-between p-2">
+        <h4 class="font-weight-bolder" [translate]="'languageListComponent.button3'"></h4>
+        <h5 class="font-weight-bolder text-center" [translate]="levelsh.language"></h5>
       </div>
       <ul class="list-unstyled">
-        <li class=" pr-2 pl-2">
-          <label class="font-weight-bolder" style="width: 150px">parle</label>
-          <label >{{levelsh.parle}}</label>
+        <li class=" pr-2 ">
+          <label class="font-weight-bolder" style="width: 150px" [translate]="'addLanguageComponent.label1'"></label>
+          <label [translate]="levelsh.speak"></label>
         </li>
-        <li class=" pr-2 pl-2">
-          <label class="font-weight-bolder"  style="width: 150px">comprendre</label>
-          <label >{{levelsh.comprendre}}</label>
+        <li class=" pr-2 ">
+          <label class="font-weight-bolder" style="width: 150px" [translate]="'addLanguageComponent.label2'"></label>
+          <label [translate]="levelsh.Write"></label>
         </li>
-        <li class=" pr-2 pl-2">
-          <label class="font-weight-bolder"  style="width: 150px">ecrire</label>
-          <label >{{levelsh.ecrire}}</label>
+        <li class=" pr-2 ">
+          <label class="font-weight-bolder" style="width: 150px" [translate]="'addLanguageComponent.label3'"></label>
+          <label [translate]="levelsh.understand"></label>
         </li>
       </ul>
     </div>

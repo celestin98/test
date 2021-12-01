@@ -1,5 +1,23 @@
 {
+	"addLanguageComponent.label1": "speak",
+	"addLanguageComponent.label2": "write",
+	"addLanguageComponent.label3": "understand",
+	"addLanguageComponent.option1": "elementary",
+	"addLanguageComponent.option2": "pre-intermediate",
+	"addLanguageComponent.option3": "intermediary",
+	"addLanguageComponent.option3 (2)": "intermediary",
+	"addLanguageComponent.option4": "fluent",
+	"homepagecomponent.header": "Language management",
 	"language.1": "French",
 	"language.2": "English",
-	"language.3": "dutch"
+	"language.3": "dutch",
+	"languageListComponent.AddButton": "add a language +",
+	"languageListComponent.button1": "delete",
+	"languageListComponent.button2": "modify",
+	"languageListComponent.button3": "detail",
+	"languageListComponent.header": "list of known languages",
+	"languageListComponent.label1": "number of languages",
+	"loginpagecomponent.bton": "start",
+	"text.home": "computerize your international languages ​​management system\nin order to identify the language level of employees.",
+	"text.warning": "internet connection unavailable please connect to internet"
 }

@@ -26,3 +26,6 @@ p,div,label{
   background-color: white;
   height: calc(100vh - 200px);
 }
+li,label,h1,h2,h3{
+  text-transform: capitalize;
+}

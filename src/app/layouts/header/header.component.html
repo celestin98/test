@@ -1,8 +1,13 @@
-<div class="head min-vw-100 d-flex justify-content-end align-items-center pr-md-3">
+<div class="head min-vw-100 d-flex justify-content-end align-items-center pr-md-3 bg_primary">
 
- <div class="position-relative language_section">
-   <fa-icon [icon]="faGlobe"></fa-icon>
-   <label>&nbsp;francais</label>
-    <app-select-language class="position-absolute"></app-select-language>
- </div>
+  <div class="position-relative language_section">
+    <button class="bg-transparent border-0" (click)="openLanguageSelector=!openLanguageSelector">
+      <fa-icon [icon]="faGlobe"></fa-icon>
+      <label *ngIf="currentLanguage == 'fr-FR'">&nbsp;francais</label>
+      <label *ngIf="currentLanguage == 'en-US'">&nbsp;English</label>
+      <label *ngIf="currentLanguage == 'nl-NL'">&nbsp;Nederlands</label>
+    </button>
+
+    <app-select-language *ngIf="openLanguageSelector" class="position-absolute"></app-select-language>
+  </div>
 </div>

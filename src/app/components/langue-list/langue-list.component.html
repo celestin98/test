@@ -1,37 +1,39 @@
 <div class=" bg-white  border language_liste p-2 d-flex flex-column my_card">
   <label class="header m-2 p-2">
-    liste des langues connus
+    {{'languageListComponent.header' | translate}}
   </label>
   <br>
   <label class="etiquet align-self-baseline selt">
-    nombre de langue: {{levels.length}}
+    {{'languageListComponent.label1' | translate}}: {{levels.length}}
   </label>
   <ul class="overflow-auto list-unstyled">
-    <li *ngFor="let lang of levels" class="d-flex justify-content-between align-items-center pr-2 pl-2"><label>{{lang.language}}</label>
+    <li *ngFor="let lang of levels" class="d-flex justify-content-between align-items-center pr-2 pl-2"><label
+      [translate]="lang.language"></label>
       <div class="d-flex flex-row">
         <button class="my_btn mr-2" (click)="deleteLanguage(lang)">
           <fa-icon class="icon" [icon]="faTrash"></fa-icon>
           <label class="d-none d-md-block">
-            &nbsp;supprimer
+            {{'languageListComponent.button1' | translate}}&nbsp;
           </label>
         </button>
         <button class="my_btn mr-2" (click)="modifiedlanguage(lang)">
           <fa-icon [icon]="faConfig"></fa-icon>
           <label class="d-none d-md-block">
-            &nbsp;modifier
+            &nbsp;{{'languageListComponent.button2' | translate}}
           </label>
         </button>
         <button class="my_btn mr-2" (click)="showdetail(lang)">
           <fa-icon [icon]="faLook"></fa-icon>
           <label class="d-none d-md-block">
-            &nbsp;Detail
+            &nbsp;{{'languageListComponent.button3' | translate}}
           </label>
         </button>
       </div>
 
     </li>
   </ul>
-  <button (click)="showAddLanguage()" class="btn bg_primary1 text-white font-weight-bold add_button">
-    ajouter une langue +
+  <button [disabled]="levels.length===3" (click)="showAddLanguage()"
+          class="btn bg_primary1 text-white font-weight-bold add_button">
+    {{'languageListComponent.AddButton' | translate}}
   </button>
 </div>

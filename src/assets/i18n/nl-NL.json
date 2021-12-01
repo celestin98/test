@@ -1,5 +1,23 @@
 {
+	"addLanguageComponent.label1": "spreken",
+	"addLanguageComponent.label2": "schrijven",
+	"addLanguageComponent.label3": "begrijpen",
+	"addLanguageComponent.option1": "elementair",
+	"addLanguageComponent.option2": "pre-intermediair",
+	"addLanguageComponent.option3": "tussenpersoon",
+	"addLanguageComponent.option3 (2)": "tussenpersoon",
+	"addLanguageComponent.option4": "vloeiend",
+	"homepagecomponent.header": "Taalbeheer",
 	"language.1": "Frans",
 	"language.2": "angels",
-	"language.3": "Nederlands"
+	"language.3": "Nederlands",
+	"languageListComponent.AddButton": "een taal toevoegen +",
+	"languageListComponent.button1": "verwijderen",
+	"languageListComponent.button2": "Bewerken",
+	"languageListComponent.button3": "detail",
+	"languageListComponent.header": "lijst met bekende talen",
+	"languageListComponent.label1": "aantal talen",
+	"loginpagecomponent.bton": "begin",
+	"text.home": "automatiseer uw internationale talenbeheersysteem\nom het taalniveau van medewerkers vast te stellen.",
+	"text.warning": "internetverbinding niet beschikbaar, maak verbinding met internet"
 }

@@ -1,5 +1,23 @@
 {
+	"addLanguageComponent.label1": "parler",
+	"addLanguageComponent.label2": "écrire",
+	"addLanguageComponent.label3": "comprendre",
+	"addLanguageComponent.option1": "élémentaire",
+	"addLanguageComponent.option2": "pré-intermédiaire",
+	"addLanguageComponent.option3": "intermédiaire",
+	"addLanguageComponent.option3 (2)": "intermédiaire",
+	"addLanguageComponent.option4": "courant",
+	"homepagecomponent.header": "Gestion des langues",
 	"language.1": "français ",
 	"language.2": "Anglais",
-	"language.3": "néerlandais"
+	"language.3": "néerlandais",
+	"languageListComponent.AddButton": " ajouter une langue +",
+	"languageListComponent.button1": "supprimer",
+	"languageListComponent.button2": "modifier",
+	"languageListComponent.button3": "détails",
+	"languageListComponent.header": "liste des langues connus",
+	"languageListComponent.label1": "nombre de langue",
+	"loginpagecomponent.bton": "commencer",
+	"text.home": " informatiser votre système de gestion des langues internationaux \nafin de repérer le niveau de langue des employés.",
+	"text.warning": " connection internet indisponible veillez vous connecter a internet"
 }

@@ -1,42 +1,43 @@
-<div class="mt-5 mt-md-0 w-100 my_card row m-0 p-0 overflow-hidden ">
+<div class="mt-5 mt-md-0 w-100 my_card row m-0 p-0 overflow-hidden position-relative">
+  <button class="close_btn" (click)="closesa()">X</button>
   <div class="col-12 h-100 m-0 p-0" [class.vae]="level.id !== ''">
     <div class="col-12 h-100 m-0 p-0 d-flex justify-content-center align-items-center">
       <ul class="overflow-auto list-unstyled m-0 my_list ">
         <li *ngFor="let languageView of languages"
             class="d-flex justify-content-center align-items-center pr-2 text-center pl-2"
             (click)="setLangage(languageView)"><label
-          class="m-0">{{languageView.nom}}</label></li>
+          class="m-0" [translate]="languageView.name"></label></li>
       </ul>
     </div>
     <div class="col-12 h-100 d-flex flex-column justify-content-center align-items-center overflow-auto">
       <div class="w-100 test">
-        <h3 class="font-weight-bolder">
-          {{level.language}}
+        <h3 class="font-weight-bolder" [translate]="level.language">
         </h3>
         <div class="option d-flex flex-column align-content-star p-0 ">
 
-          <label for="parler" class="text-left  pl-2">Parlez</label>
+          <label for="parler" class="text-left  pl-2" [translate]="'addLanguageComponent.label1'"></label>
           <ul class="list-unstyled" id="parler">
-            <li *ngFor="let levelview of levels" [class.select]="level.parle == levelview"
-                (click)="level.parle=levelview">{{levelview}}</li>
+            <li *ngFor="let levelview of levels" [class.select]="level.speak == levelview"
+                (click)="level.speak=levelview" [translate]="levelview"></li>
           </ul>
         </div>
         <div class="option d-flex flex-column align-content-star p-0 mt-3">
-          <label for="comprendre" class="text-left  pl-2">Comprendre</label>
+          <label for="comprendre" class="text-left  pl-2" [translate]="'addLanguageComponent.label3'"></label>
           <ul class="list-unstyled" id="comprendre">
-            <li *ngFor="let levelview of levels" [class.select]="level.comprendre == levelview"
-                (click)="level.comprendre=levelview">{{levelview}}</li>
+            <li *ngFor="let levelview of levels" [class.select]="level.understand == levelview"
+                (click)="level.understand=levelview" [translate]="levelview"></li>
           </ul>
         </div>
         <div class="option mt-3 d-flex flex-column align-content-star p-0 ">
-          <label for="ecrire" class="text-left  pl-2">ecrire</label>
+          <label for="ecrire" class="text-left  pl-2" [translate]="'addLanguageComponent.label2'"></label>
           <ul class="list-unstyled" id="ecrire">
-            <li *ngFor="let levelview of levels" [class.select]="level.ecrire == levelview"
-                (click)="level.ecrire=levelview">{{levelview}}</li>
+            <li *ngFor="let levelview of levels" [class.select]="level.Write == levelview"
+                (click)="level.Write=levelview" [translate]="levelview"></li>
           </ul>
         </div>
-        <button [disabled]="level.ecrire =='' || level.comprendre =='' || level.parle ==''"
-                class="add_button bg_primary1 border-0 w-100 text-white font-weight-bolder mt-1 btn" (click)="setlevel()">
+        <button [disabled]="level.Write =='' || level.understand =='' || level.speak ==''"
+                class="add_button bg_primary1 border-0 w-100 text-white font-weight-bolder mt-1 btn"
+                (click)="setlevel()">
           Enregistre
         </button>
       </div>

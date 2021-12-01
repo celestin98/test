@@ -1,8 +1,7 @@
 <div id="talkbubble" >
   <ul class="list-unstyled">
-    <li>francais</li>
-    <li>francais</li>
-    <li>francais</li>
-    <li>francais</li>
+    <li (click)="setlanguage('fr-FR')">{{'language.1' | translate}}</li>
+    <li (click)="setlanguage('en-US')">{{'language.2' | translate}}</li>
+    <li (click)="setlanguage('nl-NL')">{{'language.3' | translate}}</li>
   </ul>
 </div>

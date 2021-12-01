@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Level} from "../../models/level";
+import {faEye} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-home-page',
@@ -9,8 +10,9 @@ import {Level} from "../../models/level";
 export class HomePageComponent implements OnInit {
   showModal = false;
   showModalDetail = false;
-  leveli: Level = {};
-  levelsh: Level = {id: ''};
+  faLook = faEye;
+  leveli: Level = {language: '', speak: '', id: '', understand: '', Write: ''};
+  levelsh: Level = {language: '', speak: '', id: '', understand: '', Write: ''};
 
   constructor() {
   }
@@ -18,22 +20,23 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  modalClosed(isClosed: any) {
-    this.leveli = {id: '', language: '', comprendre: '', parle: '', ecrire: ''}
-    this.showModal = !this.showModal;
 
+  addLanguageModal(isClosed: any) {
+    this.leveli = {id: '', language: '', understand: '', speak: '', Write: ''}
+    this.showModal = !this.showModal;
   }
 
-  modi(level: Level) {
+  modifyLanguageModal(level: Level) {
     this.leveli = level;
     this.showModal = !this.showModal;
   }
 
-  showDetail(level: Level) {
+
+  showDetailModal(level: Level) {
     this.levelsh = level;
     this.showModalDetail = !this.showModalDetail;
   }
-  closemodal(){
+  closeModal(){
     this.showModalDetail = !this.showModalDetail;
   }
 

@@ -1,4 +1,4 @@
-.tables{
+.tables {
   width: 1002px;
   flex-shrink: unset;
 }
@@ -11,7 +11,6 @@ li {
 
 
 }
-
 
 
 li:hover {
@@ -30,7 +29,7 @@ li:hover {
   }
 
   li {
-    height: 30px;
+    height: 21px;
     width: 100%;
     border-radius: 0;
     display: flex;
@@ -40,14 +39,27 @@ li:hover {
   }
 
 }
-.vae{
+
+.vae {
   transform: translateY(-100%);
   transition: 1s;
 }
-.my_list{
+
+.my_list {
   max-height: 100% !important;
   width: 100%;
 }
-.select{
+
+.select {
   background-color: orange;
+}
+
+.close_btn {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  background-color: transparent;
+  font-weight: bolder;
+  z-index: 10000;
+  border: none;
 }

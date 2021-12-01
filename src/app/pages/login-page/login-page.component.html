@@ -1,22 +1,22 @@
-<div class="container">
-  <div class="login">
-    <div class="container">
-      <h1>Log in</h1>
-      <input type="text" placeholder="login">
-      <input type="password" placeholder="Password"><br>
-      <input type="checkbox"><span>Remember me</span>
-      <a href="#">Forgot password?</a>
-      <button (click)="login()">log in</button>
-      <div class="clearfix"></div>
+<body class="vh-100">
+<app-header class="bg_primary"></app-header>
+<main class="h-100">
+  <div class="row w-100 h-100">
+    <div class="col-6 bg_primary h-100 left d-flex justify-content-center align-items-center">
+      <p [translate]="'text.home'" class="w-75 text-justify">
+
+      </p>
     </div>
-  </div>
-  <div class="register">
-    <div class="container">
-      <i class="fas fa-user-plus fa-5x"></i>
-      <h2>bonjour!</h2>
-      <p> login <br> test <br>
-        mot de passe <br>test2021</p>
-      <button>creer un compte <i class="fas fa-arrow-circle-right"></i></button>
+    <div class="col-6 d-flex justify-content-center align-items-center">
+      <button
+        class="bg_primary border-0 btn text-white d-flex justify-content-center align-items-center font-weight-bolder"
+        (click)="login()">
+        <label [translate]="'loginpagecomponent.bton'" class="text-white font-weight-bolder"></label> ->
+      </button>
+
     </div>
+
   </div>
-</div>
+</main>
+</body>
+
